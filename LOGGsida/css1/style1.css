@@ -1,0 +1,54 @@
+
+body {
+    background-color: #000099;
+}
+
+header {
+    margin-left: 20px;
+}
+
+.ruta1 {
+    font-size: 40px;
+}
+
+.ruta2 {
+    margin-left: 600px;
+    margin-right: 30px;
+    padding: 20px;
+    color: white;
+}
+
+.ruta3 {
+    color: white;
+    padding: 20px;
+}
+
+a:hover {
+    color: black;
+}
+
+.container1 {
+    display: flex;
+    color: white;
+    padding: 5px;
+    margin-bottom: 0;
+}
+
+Section {
+    margin-top: 0;
+}
+
+.container2 {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding-top: 0;
+    padding: 20px;
+    justify-content: space-between;
+}
+
+.bild1, .bild2, .bild3, .bild4, .bild5, .bild6 {
+    border-radius: 5px;
+}
+
+
+

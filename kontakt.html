@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt - ..BG.. Big_Creation</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+        <div class="container1">
+            <div class="ruta1">..BG.. Big_Creation</div>
+            <a class="ruta2" href="index.html">Home</a> <!-- OBS: Här går vi tillbaka till startsidan -->
+            <a class="ruta3" href="kontakt.html">Contact</a>
+            <a class="ruta4" href="https://telia.se">Service</a>
+            <a class="ruta5" href="https://telia.se">Join</a>
+        </div>
+    </header>
+
+    <section>
+        <h2>Kontakta oss</h2>
+        <form action="kontakt.php" method="POST">
+            <label for="name">Namn:</label><br>
+            <input type="text" id="name" name="name" required><br><br>
+
+            <label for="email">E-post:</label><br>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <label for="message">Meddelande:</label><br>
+            <textarea id="message" name="message" rows="5" required></textarea><br><br>
+
+            <input type="submit" value="Skicka">
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; ..BG.. Big_creation&nbsp; Alla rättigheter förbehållna</p>
+    </footer>
+
+</body>
+</html>

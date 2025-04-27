@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css2/style2.css">
+</head>
+<body>
+
+<div class="container4">
+    <h2>Skapa konto</h2>
+    <form id="registerForm">
+    <div class="form-row">
+    <div class="form-group">  
+        <label for="förNamn">Förnamn</label>
+        <input type="text" id="förNamn" required />
+    </div>
+
+    <div class="form-group">
+        <label for="efterNamn">Efternamn</label>
+        <input type="text" id="efterNamn" required />
+    </div>
+    </div>
+
+    <div class="form-group">
+        <label for="epost">E-postadress</label>
+        <input type="epost" id="epost" required />
+    </div>
+
+    <div class="form-group">
+        <label for="lösenord">Lösenord</label>
+        <input type="lösenord" id="lösenord" required />
+    </div>
+
+    <div class="form-group">
+        <label for="bekräftaLösenord">Ange lösenordet på nytt</label>
+        <input type="lösenord" id="bekräftaLösenord" required />
+    </div>
+
+    <div class="form-group checkbox-group">
+        <input type="checkbox" id="consent" required />
+        <label for="consent">Jag godkänner användarvilkoren</label>
+    </div>
+
+    <button type="submit">Skapa konto</button>
+    </form>
+</div>
+<script> // Hämtar dokumentet från registerFrom och spara i variabel form.
+const form= document.getElementById("registerForm");
+
+// Funktionen körs när du klickar på knapp för att skicka.
+form.addEventListener("submit", function (e){
+    e.preventDefault(); // Hanterar formulärdata med JavaScript istället för att skicka till server.
+
+    // Kopplar till checkbox och id="consent".
+    const checkbox = document.getElementById("consent");
+
+    // Checkar om kryssruta är ikryssad, om inte visas alert.
+    if (!checkbox.checked) {
+        alert("Du måste godkänna samtycke.");
+        return;
+    }
+    // Skickar vidare till ../index.html när samtycke är ikryssad.
+    window.location.href = "../index.html";
+});
+</script>
+</body>
+</html>
+

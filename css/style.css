@@ -1,0 +1,115 @@
+
+body {
+    background-color: #000099;
+    padding: 10px;
+}
+
+.container1 {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto;
+    color: white;
+}
+
+a:hover {
+    color:black; /* Hovra till en mjukare färg.*/
+}
+
+.ruta1 {
+    font-size: 40px;
+}
+
+.ruta2, .ruta3, .ruta4, .ruta5, .ruta6 {
+    padding: 20px;
+    color: white;
+}
+
+section {
+    margin-top: 10px;
+    margin-bottom: 20px;  
+}
+.titel {
+    color:white;
+    font-size: 20px;
+    margin-left: 5px;
+    margin-bottom: 5px;
+}
+
+.container2 {
+    display: flex;
+    gap: 5px;
+}
+
+main {
+    border: 1px solid white;
+    border-radius: 10px;
+    color: white;
+}
+
+footer {
+    border: 1px solid white;
+    border-radius: 10px;
+    margin-top: 20px;
+    color: white;
+}
+
+.dropdown {
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 10px;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.dropdown button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    background-color: #eee;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown button:hover {
+    background-color: #ddd;
+}
+
+form {
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  }
+  
+  form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  form input[type="submit"] {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  form input[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  #kontakt {
+    display: none;
+  }

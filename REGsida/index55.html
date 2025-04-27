@@ -1,0 +1,72 @@
+// Här är en uppdatering till index2.html. Byt script mot den här om du vill använda den här koden.
+// Den länkar till Mina sidor på ../index.html.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    const form = document.getElementById("registerForm");
+        form.addEventListener("sumit", function (e) {
+            e.preventDefault(); // Stoppar sidan att laddas om när den skickas.
+
+        // Tar värden från input och id.
+        // .checked kollar checkbox om den är markerad.
+        const förNamn = document.getElementById("förNamn").value;
+        const efterNamn = document.getElementById("efterNamn").value;
+        const epost = document.getElementById("epost").value;
+        const lösenord = document.getElementById("lösenord").value;
+        const bekräfta = document.getElementById("bekräftaLösenord").value;
+        const consent = document.getElementById("consent").checked;
+
+        // Registrering stoppas och alert visas om det ej är ikryssat.
+         if (!consent) {
+            alert("Godkänn samtycke");
+            return;
+        }
+    
+        if (lösenord !== bekräfta) {
+            alert("Lösenorden är inte lika!");
+            return;
+        }  
+
+        const användare = {
+            förNamn,
+            efterNamn,
+            epost,
+            lösenord
+        };
+        
+        // Spars i lokalStorage för att skicka till nästa sida.
+        localStorage.setItem("användare", JSON.stringify(användare));
+    
+        // Skickas till Mina sidor.
+        window.location.href = "../index.html";
+        });
+    </script>
+
+    // Det här koden ska läggas till i index.html om du vill använda det ovansstående scriptet.
+    <script>
+        // Hämtar från dta från localStorage.
+        const data = localStorage.getItem("användare");
+        
+        // Om data är sparat tolkas den som ett objekt med JSON.parse.
+        // Visas i Id profilInfo element.
+        if (data) {
+            const användare = JSON.parse(data);
+            const profil = document.getElementById("profilInfo");
+            profil.innerHTML = `
+            <p><strong>Namn:</strong> ${användare.förnamn} ${användare.efternamn}</p>
+            <p><strong>E-post:</strong> ${användare.epost}</p>
+            `;
+        } else {
+            document.getElementById("profilInfo").innerText = "Ingen användare inloggad.";
+        }
+    </script>
+    
+    
+</body>
+</html>
